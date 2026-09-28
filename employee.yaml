@@ -1,0 +1,27 @@
+name: content                    # the slug: matches the repository emp-content and the label owner:content
+display_name: "Content"
+labels: [owner:content]
+reads: []                        # other bot repositories this one may clone read-only
+
+# Runtime and model are left to your install (hub registry defaults apply). Override here only if
+# this bot needs something different:
+# runtime: <your runtime>
+# model: <your model>
+max_run_minutes: 60
+
+# Nothing addressed to anyone outside the company leaves until an owner turns this on. This bot has
+# no reason to need it.
+outbound_send: false
+
+# Start with none. Add a monthly planning routine once you have read a couple of months of hand-run plans:
+# schedules:
+#   - id: monthly-plan
+#     title: Plan next month's content
+#     cron: "0 9 25 * *"
+#     timezone: America/Los_Angeles   # set to your own timezone
+#     template: playbooks/plan-the-month.md
+schedules: []
+
+# Not listed is not allowed. Public web reading needs no access entry. This bot never needs write
+# access to a channel, a CMS, or a newsletter tool.
+access: []
